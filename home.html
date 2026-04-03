@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aura Intelligence | The Digital Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#353437",
+              "on-tertiary-fixed": "#370e00",
+              "surface-bright": "#39393b",
+              "on-secondary-fixed-variant": "#344088",
+              "tertiary-fixed-dim": "#ffb599",
+              "on-primary": "#001d93",
+              "primary-fixed-dim": "#bbc3ff",
+              "outline": "#8e8fa2",
+              "on-secondary-fixed": "#010f5c",
+              "inverse-on-surface": "#313032",
+              "surface-container-lowest": "#0e0e10",
+              "secondary": "#bbc3ff",
+              "error": "#ffb4ab",
+              "on-tertiary": "#5a1c00",
+              "on-tertiary-container": "#ffeee8",
+              "on-secondary-container": "#a9b4ff",
+              "on-error": "#690005",
+              "outline-variant": "#444656",
+              "on-primary-fixed-variant": "#002ccd",
+              "surface-container": "#201f22",
+              "surface-tint": "#bbc3ff",
+              "surface-dim": "#131315",
+              "error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#7f2b00",
+              "on-surface-variant": "#c5c5d9",
+              "surface-container-low": "#1c1b1e",
+              "background": "#131315",
+              "tertiary-fixed": "#ffdbce",
+              "on-primary-fixed": "#000f5d",
+              "on-background": "#e5e1e4",
+              "secondary-fixed": "#dee0ff",
+              "primary-fixed": "#dee0ff",
+              "tertiary-container": "#c04500",
+              "tertiary": "#ffb599",
+              "on-primary-container": "#f1f0ff",
+              "primary-container": "#3d5afe",
+              "surface": "#131315",
+              "inverse-surface": "#e5e1e4",
+              "primary": "#bbc3ff",
+              "on-secondary": "#1c2971",
+              "surface-container-high": "#2a2a2c",
+              "secondary-container": "#37438b",
+              "inverse-primary": "#2848ee",
+              "surface-container-highest": "#353437",
+              "secondary-fixed-dim": "#bbc3ff",
+              "on-surface": "#e5e1e4",
+              "on-error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .bg-signature-gradient {
+        background: linear-gradient(135deg, #bbc3ff 0%, #3d5afe 100%);
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .card-hover:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 20px 25px -5px rgba(61, 90, 254, 0.1), 0 10px 10px -5px rgba(61, 90, 254, 0.04);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-zinc-950/60 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(61,90,254,0.08)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-zinc-100 flex items-center gap-2 font-headline">
+<span class="material-symbols-outlined text-[#3D5AFE]" data-icon="smart_toy">smart_toy</span>
+                Aura Intelligence
+            </div>
+<div class="hidden md:flex items-center gap-8 font-manrope text-sm tracking-tight font-medium">
+<a class="text-[#bbc3ff] font-semibold" href="#">Home</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors" href="#">About</a>
+<a class="text-zinc-400 hover:text-zinc-100 transition-colors" href="#">Sponsor Us</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-signature-gradient text-on-primary-fixed px-6 py-2 rounded-full font-semibold text-sm hover:backdrop-brightness-110 transition-all scale-95 active:scale-90 duration-200">
+                    Subscribe
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-8 py-20 md:py-32 overflow-hidden max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute top-1/2 -right-24 w-[500px] h-[500px] bg-primary-container/5 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="flex-1 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-surface-container-highest mb-6 border border-outline-variant/15">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[10px] uppercase tracking-widest font-bold text-tertiary">New Edition Live</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-6 text-white">
+                    Stay Ahead <br/><span class="text-transparent bg-clip-text bg-signature-gradient">in AI.</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 font-light leading-relaxed">
+                    The curated intelligence engine for high-signal updates in artificial intelligence. No noise, just the strategic insights you need to navigate the synthetic frontier.
+                </p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg group">
+<div class="relative flex-1">
+<input class="w-full bg-transparent border-0 border-b-2 border-outline-variant/40 py-4 px-0 focus:ring-0 focus:border-primary text-white transition-all placeholder:text-zinc-600" placeholder="Enter your email" required="" type="email"/>
+<span class="absolute bottom-0 left-0 h-[2px] w-0 bg-primary group-focus-within:w-full transition-all duration-300"></span>
+</div>
+<button class="bg-signature-gradient text-on-primary-fixed px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:scale-105 active:scale-95 transition-all" type="submit">
+                        Join 25k+ Readers
+                    </button>
+</form>
+<p class="mt-4 text-xs text-zinc-500 font-label">Join the world's leading researchers, developers, and founders.</p>
+</div>
+<div class="flex-1 relative z-10 hidden md:block">
+<div class="relative w-full aspect-square rounded-xl overflow-hidden shadow-2xl shadow-primary/10 bg-surface-container-low">
+<img alt="Abstract AI Visualization" class="w-full h-full object-cover mix-blend-lighten" data-alt="Futuristic high-tech digital sculpture composed of glowing blue and purple neural pathways and particles on a deep black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWj-LDERS-BjWJ_JQiliB5KWKycujYpNLL2ZOSl6m9swi4Zj9aR2X3cNJhyVJQRLJBOIEaKHNapAPdfqgbe0jOQ16w5MeDOrVQkCK_Lv2LPEwmcFIiHu-FflIXd7WK4CXy4GbND6W5fWj0dt1mfqDCWCdyKMBLZCynN9hk8ob-QWUS_7jlyDupwBPe3c2K80jvMMl8gn6HgA66xRikMt9qCPpxOqxvljgFXrpYpSpKiPAhVZMe66OfPqYeR3PzDgK5crzsBwAQD8U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-6 bg-surface-container-highest/60 backdrop-blur-md rounded-lg border border-outline-variant/15">
+<div class="flex items-center gap-4 mb-3">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">Latest Insight</span>
+</div>
+<p class="text-sm font-medium text-white italic">"Large Language Models are evolving from static tools into dynamic cognitive architectures that reshape human-computer synthesis."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Subscribe Section -->
+<section class="bg-surface-container-lowest py-24 border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-headline text-3xl md:text-4xl font-bold tracking-tight mb-4">Why Subscribe?</h2>
+<p class="text-on-surface-variant max-w-md">Our intelligence filter ensures you spend less time scrolling and more time building.</p>
+</div>
+<div class="h-[1px] flex-1 bg-outline-variant/20 mx-12 hidden md:block"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary border border-outline-variant/10">
+<span class="material-symbols-outlined" data-icon="filter_alt">filter_alt</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-white">Curated Insights</h3>
+<p class="text-zinc-500 text-sm leading-relaxed">We sift through thousands of papers, repositories, and tweets to bring you only the top 1% of high-signal movements.</p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary border border-outline-variant/10">
+<span class="material-symbols-outlined" data-icon="update">update</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-white">Daily Updates</h3>
+<p class="text-zinc-500 text-sm leading-relaxed">AI moves fast. We send a concise, 5-minute summary every morning so you're never out of the loop on breaking tech.</p>
+</div>
+<div class="flex flex-col gap-6">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary border border-outline-variant/10">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-white">Practical Alpha</h3>
+<p class="text-zinc-500 text-sm leading-relaxed">Move beyond the hype. We focus on tools and frameworks that actually increase productivity and revenue today.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Issues Section -->
+<section class="py-24 px-8 max-w-7xl mx-auto" id="latest-issues">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+<div>
+<h2 class="font-headline text-3xl md:text-4xl font-bold tracking-tight mb-2">Latest Issues</h2>
+<p class="text-zinc-500 text-sm">The latest strategy and code from the frontier.</p>
+</div>
+<!-- Filter Bar -->
+<div class="flex flex-wrap gap-2 bg-surface-container-low p-1.5 rounded-full border border-outline-variant/10" id="filter-bar">
+<button class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-primary text-on-primary" data-filter="All">All</button>
+<button class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-zinc-400 hover:text-white" data-filter="AI News">AI News</button>
+<button class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-zinc-400 hover:text-white" data-filter="AI Tools">AI Tools</button>
+<button class="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-zinc-400 hover:text-white" data-filter="AI Frameworks">AI Frameworks</button>
+</div>
+</div>
+<!-- Issues Grid Container -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500" id="issues-grid">
+<!-- Cards will be injected here by JS -->
+</div>
+<div class="mt-16 text-center">
+<a class="inline-flex items-center gap-2 text-primary text-sm font-bold uppercase tracking-widest hover:gap-3 transition-all" href="#">
+                    Explore Archive <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface-container-low/30 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<h2 class="font-headline text-3xl font-bold mb-4">Trusted by the best</h2>
+<p class="text-zinc-500">From solo hackers to Fortune 500 executives.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 rounded-xl bg-surface-container border border-outline-variant/5">
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-6 leading-relaxed">"Aura is my secret weapon. I don't follow anyone else anymore. The signal-to-noise ratio is unbeatable."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-zinc-800 overflow-hidden">
+<img alt="Subscriber Avatar" data-alt="Portrait of a young professional man in a tech office setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALkO5aOj2kqA23vM3W74vC_SJlPStzja5KTQWIxTETXqSnJ0yECwDgPM-xEZ-E7SFluI7RlJDFn9Ux-how2EVNduR3w-hLJ95gMv3eoU6_S0MPThFOwsykxnZXO8HoeJWM1Mw45xPpHBPUd_rhKMtk80106RumkFP0dgUoHd8Ak3M-zvk0YPs-el8vT2nEnm_sJj0uNdw7vQQMhif-PlRPDLn1M7FZEnTZFusLaCdUG_-q8gJav5SLbufgpuf6wdAELBsmURMzOMA"/>
+</div>
+<div>
+<h5 class="text-sm font-bold text-white">David K.</h5>
+<p class="text-[10px] text-zinc-500 uppercase tracking-widest">Lead Engineer @ TechFlow</p>
+</div>
+</div>
+</div>
+<div class="p-8 rounded-xl bg-surface-container border border-outline-variant/5 md:-translate-y-4">
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-6 leading-relaxed">"Essential reading for anyone trying to build in the AI space. It's like having a dedicated research team in my inbox."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-zinc-800 overflow-hidden">
+<img alt="Subscriber Avatar" data-alt="Close up portrait of a confident woman with a bright smile in a minimalist studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq7o15iDVBTj2COT6ur8fuga7eefYyGcqTe7001qIrBHcTcg_FtgKBfztC0kf49C_h7itmm2PcTx_kUnVrEcg0VdNZaB3g7i-N75rUabONbhTLlKoSo_ozkRuAe_KlkA-CYEo2FTwxZdE_sSJZ5ajLYAyP_zMAX7Nba_R8_ubOxTuN2PNcBuNZOMN_Woq9Wo0FhHN4iZfpn0NbG7IIafdnx6SMb9q_S_d3YqIpZqqZh4ZBzLwSH48KasyrXwM-OaPMhjz3F1tUizc"/>
+</div>
+<div>
+<h5 class="text-sm font-bold text-white">Sarah M.</h5>
+<p class="text-[10px] text-zinc-500 uppercase tracking-widest">Founder @ Synapse AI</p>
+</div>
+</div>
+</div>
+<div class="p-8 rounded-xl bg-surface-container border border-outline-variant/5">
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface-variant italic mb-6 leading-relaxed">"The insights on vector DBs alone saved my startup months of trial and error. Worth every second of reading."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-zinc-800 overflow-hidden">
+<img alt="Subscriber Avatar" data-alt="Professional portrait of a man in a dark blazer looking at the camera with a neutral expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaE4f4dBxet2lkL177TzqoxsIMVQkqFd3JMbwqCbK9D2awA_7_1uIHq7Nrq5lDoM7agIbo5hg2153ebxdV-1Hpb-f4jbCd8JTtuu4TK5cVDCA-7S3BDWmqa_fliA1mF_MXOftqhVTCcUgHArvc-8IeEehSjGy7OsAbsRZD8oapXAmiXuX6h2ALoYWQSVcWBG9KR9RK7yelbZHMUjawXKpKNiCMm9Igx-GxhLdkZGl7Qm1LZRwv6p93wZq5b3lpFi_kZGdrK1xo9jU"/>
+</div>
+<div>
+<h5 class="text-sm font-bold text-white">Jason L.</h5>
+<p class="text-[10px] text-zinc-500 uppercase tracking-widest">CTO @ Nexa Systems</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24 px-8">
+<div class="max-w-4xl mx-auto bg-signature-gradient p-12 md:p-20 rounded-[2rem] text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-zinc-950/20 backdrop-blur-[2px]"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-on-primary-fixed mb-6 tracking-tight">The future is being written in code.</h2>
+<p class="text-on-primary-fixed/80 text-lg mb-10 max-w-xl mx-auto">Join the intelligence circle today and never miss a critical development in the AI revolution.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+<input class="flex-1 px-6 py-4 rounded-full bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white transition-all outline-none" placeholder="you@example.com" required="" type="email"/>
+<button class="bg-white text-primary-container px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-zinc-100 transition-all" type="submit">
+                            Get Access
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e10] w-full py-12 border-t border-zinc-800/20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 max-w-7xl mx-auto font-inter text-xs text-zinc-500">
+<div class="flex flex-col gap-4">
+<div class="text-lg font-bold text-zinc-200 font-headline">Aura Intelligence</div>
+<p class="max-w-xs leading-relaxed">The high-end editorial newsletter for the AI era. Curated, strategic, and direct.</p>
+<div class="text-zinc-500 mt-4">© 2024 Aura Intelligence. The Digital Curator.</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="text-zinc-300 font-bold uppercase tracking-widest text-[10px]">Ecosystem</div>
+<div class="flex flex-col gap-2">
+<a class="hover:text-[#bbc3ff] transition-colors" href="#">Privacy</a>
+<a class="hover:text-[#bbc3ff] transition-colors" href="#">Terms</a>
+<a class="hover:text-[#bbc3ff] transition-colors" href="#">Newsletter Archive</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="text-zinc-300 font-bold uppercase tracking-widest text-[10px]">Social</div>
+<div class="flex flex-col gap-2">
+<a class="hover:text-[#bbc3ff] transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-[#bbc3ff] transition-colors" href="#">Instagram</a>
+<a class="hover:text-[#bbc3ff] transition-colors" href="#">Twitter (X)</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        const issueData = [
+            {
+                title: "The Rise of Generalist Robot Agents",
+                date: "Oct 24, 2024",
+                summary: "Explore how new foundation models are bridging the gap between digital reasoning and physical action in industrial robotics.",
+                tag: "AI News",
+                readTime: "12 Min Read",
+                id: 142
+            },
+            {
+                title: "Vector Databases vs. Graph RAG",
+                date: "Oct 21, 2024",
+                summary: "Deciding on the best architecture for long-term memory in AI agents. Why graph structures are winning the context war.",
+                tag: "AI Frameworks",
+                readTime: "8 Min Read",
+                id: 141
+            },
+            {
+                title: "Top 10 Productivity Tools for Devs",
+                date: "Oct 18, 2024",
+                summary: "Our curated list of the must-have AI extensions and standalone tools that actually save you hours every single week.",
+                tag: "AI Tools",
+                readTime: "6 Min Read",
+                id: 140
+            },
+            {
+                title: "Open Source AI: The Llama Effect",
+                date: "Oct 15, 2024",
+                summary: "How Meta's strategy changed the landscape for independent developers and forced OpenAI to reconsider their closed-wall approach.",
+                tag: "AI News",
+                readTime: "10 Min Read",
+                id: 139
+            },
+            {
+                title: "PyTorch 2.5: What's New?",
+                date: "Oct 12, 2024",
+                summary: "Deep dive into the latest performance optimizations and the new compiler features that make training faster than ever.",
+                tag: "AI Frameworks",
+                readTime: "15 Min Read",
+                id: 138
+            },
+            {
+                title: "Agentic Workflows in Action",
+                date: "Oct 09, 2024",
+                summary: "Building autonomous research agents using LangChain and CrewAI. Real-world case studies for enterprise automation.",
+                tag: "AI Tools",
+                readTime: "9 Min Read",
+                id: 137
+            }
+        ];
+
+        const tagStyles = {
+            "AI News": "bg-blue-500/10 text-blue-400 border-blue-500/20",
+            "AI Tools": "bg-purple-500/10 text-purple-400 border-purple-500/20",
+            "AI Frameworks": "bg-green-500/10 text-green-400 border-green-500/20"
+        };
+
+        function renderCards(filter = "All") {
+            const grid = document.getElementById('issues-grid');
+            grid.style.opacity = '0';
+            
+            setTimeout(() => {
+                grid.innerHTML = '';
+                const filteredData = filter === "All" ? issueData : issueData.filter(item => item.tag === filter);
+                
+                filteredData.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = "group bg-surface-container-low p-7 rounded-2xl border border-outline-variant/10 transition-all duration-300 card-hover flex flex-col h-full";
+                    
+                    card.innerHTML = `
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full border ${tagStyles[item.tag]}">
+                                ${item.tag}
+                            </span>
+                            <span class="text-xs text-zinc-600 font-label">#${item.id}</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="font-headline text-xl font-bold text-white mb-3 group-hover:text-primary transition-colors duration-300">
+                                ${item.title}
+                            </h3>
+                            <p class="text-zinc-500 text-sm leading-relaxed line-clamp-3 mb-6">
+                                ${item.summary}
+                            </p>
+                        </div>
+                        <div class="pt-6 border-t border-outline-variant/10 flex flex-col gap-4">
+                            <div class="flex justify-between items-center text-[10px] text-zinc-600 font-bold uppercase tracking-widest">
+                                <span>${item.date}</span>
+                                <span>${item.readTime}</span>
+                            </div>
+                            <button class="w-full py-3 rounded-lg bg-surface-container-high text-white text-xs font-bold uppercase tracking-widest flex items-center justify-center gap-2 group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+                                Read More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+                            </button>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+                grid.style.opacity = '1';
+            }, 300);
+        }
+
+        // Filter functionality
+        document.getElementById('filter-bar').addEventListener('click', (e) => {
+            const btn = e.target.closest('button');
+            if (!btn) return;
+
+            // Update UI
+            document.querySelectorAll('#filter-bar button').forEach(b => {
+                b.classList.remove('bg-primary', 'text-on-primary');
+                b.classList.add('text-zinc-400', 'hover:text-white');
+            });
+            btn.classList.add('bg-primary', 'text-on-primary');
+            btn.classList.remove('text-zinc-400', 'hover:text-white');
+
+            renderCards(btn.dataset.filter);
+        });
+
+        // Initial render
+        renderCards();
+    </script>
+</body></html>
