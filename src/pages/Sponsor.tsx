@@ -105,67 +105,163 @@ const Sponsor = () => {
               <p className="text-on-surface-variant max-w-2xl">We offer high-integration placements designed to provide value to our readers while delivering results for your brand.</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              <div className="bg-background p-8 rounded-xl border border-outline-variant/10 flex flex-col h-full">
-                <div className="mb-6">
-                  <span className="material-symbols-outlined text-primary text-4xl mb-4">auto_stories</span>
-                  <h3 className="text-xl font-bold mb-2">The Deep Dive</h3>
-                  <p className="text-sm text-on-surface-variant">A dedicated section in our weekly newsletter including a custom editorial feature on your product.</p>
-                </div>
-                <div className="mt-auto pt-6 border-t border-outline-variant/10">
-                  <div className="text-xs text-on-surface-variant mb-1 uppercase tracking-tighter">Investment Starting At</div>
-                  <div className="text-2xl font-headline font-bold text-primary">$4,500 <span className="text-sm font-normal text-on-surface-variant">/ issue</span></div>
-                </div>
-              </div>
-
-              <div className="bg-background p-8 rounded-xl border border-outline-variant/10 flex flex-col h-full scale-105 ring-1 ring-primary/20 shadow-2xl">
-                <div className="mb-6">
-                  <span className="material-symbols-outlined text-primary text-4xl mb-4">campaign</span>
-                  <h3 className="text-xl font-bold mb-2">Prime Shoutout</h3>
-                  <p className="text-sm text-on-surface-variant">Featured sponsorship at the top of the 'Intelligence Brief' with logo and 150-word description.</p>
-                </div>
-                <div className="mt-auto pt-6 border-t border-outline-variant/10">
-                  <div className="text-xs text-on-surface-variant mb-1 uppercase tracking-tighter">Investment Starting At</div>
-                  <div className="text-2xl font-headline font-bold text-primary">$2,800 <span className="text-sm font-normal text-on-surface-variant">/ issue</span></div>
-                </div>
-              </div>
 
               <div className="bg-background p-8 rounded-xl border border-outline-variant/10 flex flex-col h-full">
                 <div className="mb-6">
-                  <span className="material-symbols-outlined text-primary text-4xl mb-4">token</span>
-                  <h3 className="text-xl font-bold mb-2">Tool Spotlight</h3>
-                  <p className="text-sm text-on-surface-variant">Featured in our 'Curated Tech' sidebar with a direct CTA and referral performance tracking.</p>
+                  <h3 className="text-4xl font-bold mb-2">Starter Plan</h3>
+
+                  <span className="material-symbols-outlined text-primary text-xl mb-8">Starter Plan</span>
+
+
+                  <ul className="text-sm text-on-surface-variant space-y-2 mt-4">
+                    <li>• Your product shown in our newsletter</li>
+                    <li>• Short description with your link</li>
+                    <li>• Reach AI audience</li>
+                  </ul>
+
                 </div>
-                <div className="mt-auto pt-6 border-t border-outline-variant/10">
-                  <div className="text-xs text-on-surface-variant mb-1 uppercase tracking-tighter">Investment Starting At</div>
-                  <div className="text-2xl font-headline font-bold text-primary">$1,200 <span className="text-sm font-normal text-on-surface-variant">/ issue</span></div>
+
+                <div className="mt-auto pt-4 border-t border-outline-variant/10">
+                  <div className="text-xs text-on-surface-variant mb-1 uppercase tracking-tighter">
+                    Investment Starting At
+                  </div>
+
+                  <div className="text-2xl font-headline font-bold text-primary mb-4">
+                    $250 <span className="text-sm font-normal text-on-surface-variant">/ issue</span>
+                  </div>
+
+                  <button
+                    onClick={() => window.open("https://news.thinkonai.in/?modal=signup", "_blank")}
+                    className="w-full py-2 rounded-lg bg-signature-gradient text-white text-xs font-bold uppercase tracking-widest hover:scale-105 transition-all"
+                  >
+                    Book Starter Plan
+                  </button>
                 </div>
               </div>
+
+              <div className="bg-background p-8 rounded-xl border border-outline-variant/10 flex flex-col h-full">
+                <div className="mb-6">
+                  <h3 className="text-4xl font-bold mb-2">Growth Plan</h3>
+
+                  <span className="material-symbols-outlined text-primary text-xl mb-8">trending_up</span>
+
+                  <ul className="text-sm text-on-surface-variant space-y-2 mt-4">
+                    <li>• Top section placement in newsletter</li>
+                    <li>• Bigger feature with more details</li>
+                    <li>• Logo + strong call-to-action</li>
+                  </ul>
+                </div>
+
+                <div className="mt-auto pt-4 border-t border-outline-variant/10">
+                  <div className="text-xs text-on-surface-variant mb-1 uppercase tracking-tighter">
+                    Investment Starting At
+                  </div>
+
+                  <div className="text-2xl font-headline font-bold text-primary mb-4">
+                    $500 <span className="text-sm font-normal text-on-surface-variant">/ issue</span>
+                  </div>
+
+                  <button
+                    onClick={() => window.open("https://news.thinkonai.in/?modal=signup", "_blank")}
+                    className="w-full py-2 rounded-lg bg-signature-gradient text-white text-xs font-bold uppercase tracking-widest hover:scale-105 transition-all"
+                  >
+                    Book Growth Plan
+                  </button>
+                </div>
+              </div>
+
+              <div className="bg-background p-8 rounded-xl border border-outline-variant/10 flex flex-col h-full">
+                <div className="mb-6">
+                  <h3 className="text-4xl font-bold mb-2">Pay Per Click</h3>
+
+                  <span className="material-symbols-outlined text-primary text-xl mb-8">ads_click</span>
+
+
+                  <ul className="text-sm text-on-surface-variant space-y-2 mt-4">
+                    <li>• Real AI audience (builders & founders)</li>
+                    <li>• No wasted money on views</li>
+                    <li>• Pay only for actual results</li>
+                  </ul>
+
+
+                </div>
+
+                <div className="mt-auto pt-4 border-t border-outline-variant/10">
+                  <div className="text-xs text-on-surface-variant mb-1 uppercase tracking-tighter">
+                    Pricing
+                  </div>
+
+                  <div className="text-2xl font-headline font-bold text-primary mb-4">
+                    $2 <span className="text-sm font-normal text-on-surface-variant">/ click</span>
+                  </div>
+
+                  <button
+                    onClick={() => window.open("https://news.thinkonai.in/?modal=signup", "_blank")}
+                    className="w-full py-2 rounded-lg bg-signature-gradient text-white text-xs font-bold uppercase tracking-widest hover:scale-105 transition-all"
+                  >
+                    Start Campaign ($2/click)
+                  </button>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="max-w-7xl mx-auto px-8 mb-16" id="contact">
+        <section className="max-w-7xl mx-auto px-8" id="contact">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-            <div>
-              <h2 className="text-4xl font-headline font-bold mb-6">Let's Build a High-Signal Partnership.</h2>
-              <p className="text-on-surface-variant text-lg mb-8">Ready to reach the creators and thinkers shaping the future of AI? Send us a brief message about your brand and objectives.</p>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <span className="material-symbols-outlined text-tertiary">verified</span>
+            <div className="bg-background/60 backdrop-blur-xl border border-outline-variant/10 rounded-2xl p-8 md:p-12 shadow-lg">
+
+              <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6 text-white leading-tight">
+                Let’s Build a <span className="text-primary">High-Signal Partnership</span>
+              </h2>
+
+              <p className="text-on-surface-variant text-base md:text-lg mb-10 max-w-xl leading-relaxed">
+                Reach creators and builders shaping the future of AI. Tell us about your product and goals we’ll help you get in front of the right audience.
+              </p>
+
+              {/* FEATURES */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                {/* CARD 1 */}
+                <div className=" gap-4 p-5 rounded-xl border border-outline-variant/10 bg-surface-container-low hover:bg-surface-container transition-all">
+                  <div className=" h-10 w-full mb-4 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <span className="flex justify-center items-center material-symbols-outlined">verified</span>
+                  </div>
                   <div>
-                    <div className="font-bold text-on-surface">Curated Fit</div>
-                    <p className="text-sm text-on-surface-variant">We only partner with brands that provide genuine value to our audience.</p>
+                    <h4 className="font-semibold text-white mb-1">Curated Fit</h4>
+                    <p className="text-sm text-on-surface-variant">
+                      We only work with brands that truly add value to our audience.
+                    </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <span className="material-symbols-outlined text-tertiary">monitoring</span>
+
+                {/* CARD 2 */}
+                <div className="gap-4 p-5 rounded-xl border border-outline-variant/10 bg-surface-container-low hover:bg-surface-container transition-all">
+                  <div className="h-10 w-full mb-4 flex items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <span className="material-symbols-outlined">monitoring</span>
+                  </div>
                   <div>
-                    <div className="font-bold text-on-surface">Transparent Reporting</div>
-                    <p className="text-sm text-on-surface-variant">Full post-campaign analytics provided for every sponsorship.</p>
+                    <h4 className="font-semibold text-white mb-1">Transparent Reporting</h4>
+                    <p className="text-sm text-on-surface-variant">
+                      Get full analytics and performance insights after every campaign.
+                    </p>
                   </div>
                 </div>
+
               </div>
+
+              {/* CTA */}
+              <div className="mt-10 flex justify-center items-center">
+                <button
+                  onClick={() => window.open("https://news.thinkonai.in/?modal=signup", "_blank")}
+                  className="bg-signature-gradient px-8 py-3 rounded-full text-white font-semibold text-sm hover:scale-105 active:scale-95 transition-all"
+                >
+                  Start Partnership
+                </button>
+              </div>
+
             </div>
 
             <div className="bg-surface-container p-8 md:p-12 rounded-2xl border border-outline-variant/10 shadow-2xl">

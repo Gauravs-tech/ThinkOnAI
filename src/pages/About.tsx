@@ -125,7 +125,7 @@ const About = () => {
               <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary rounded-full blur-[120px]"></div>
             </div>
             <h2 className="text-4xl font-headline font-bold mb-6 relative z-10">Ready to sharpen your perspective?</h2>
-            <p className="text-on-surface-variant mb-10 max-w-xl mx-auto relative z-10">Join 45,000+ subscribers receiving our curated intelligence every Tuesday morning.</p>
+            <p className="text-on-surface-variant mb-10 max-w-xl mx-auto relative z-10">Join 100+ subscribers receiving our curated intelligence everyday Morning & Evening.</p>
 
             <button onClick={() => window.open("https://news.thinkonai.in/?modal=signup", "_blank")}
               className="signature-gradient px-8 py-3 rounded-full font-bold text-on-primary-container hover:backdrop-brightness-110 transition-all">Join Aura</button>

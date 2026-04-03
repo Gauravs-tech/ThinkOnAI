@@ -8,14 +8,14 @@ import Loader from './components/common/Loader';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
-  
+
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<MainLayout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="sponsor" element={<Sponsor />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/sponsor" element={<Sponsor />} />
         </Route>
       </Routes>
     </AnimatePresence>
