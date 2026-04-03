@@ -107,7 +107,7 @@ const About = () => {
           <div className="mb-12 inline-block">
             <div className="w-24 h-24 mx-auto rounded-full p-1 signature-gradient mb-6">
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-background bg-surface-container-highest">
-                <img alt="Elias Thorne" className="w-full h-full object-cover " src="./public/Profile.png" />
+                <img alt="Gaurav Shegekar" className="w-full h-full object-cover " src="/images/Profile.png" />
               </div>
             </div>
             <h2 className="text-3xl font-headline font-extrabold text-on-surface">Gaurav Shegekar</h2>
