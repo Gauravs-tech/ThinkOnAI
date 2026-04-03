@@ -126,10 +126,10 @@ const About = () => {
             </div>
             <h2 className="text-4xl font-headline font-bold mb-6 relative z-10">Ready to sharpen your perspective?</h2>
             <p className="text-on-surface-variant mb-10 max-w-xl mx-auto relative z-10">Join 45,000+ subscribers receiving our curated intelligence every Tuesday morning.</p>
-            <form className="flex flex-col sm:flex-row gap-4 justify-center items-center relative z-10" onSubmit={e => e.preventDefault()}>
-              <input className="bg-transparent border-0 border-b-2 border-outline-variant/40 focus:border-primary focus:ring-0 text-on-surface w-full sm:w-80 px-4 py-3 transition-all duration-200 outline-none" placeholder="Enter your email" type="email" required />
-              <button type="submit" className="signature-gradient px-8 py-3 rounded-full font-bold text-on-primary-container hover:backdrop-brightness-110 transition-all">Join Aura</button>
-            </form>
+
+            <button onClick={() => window.open("https://news.thinkonai.in/?modal=signup", "_blank")}
+              className="signature-gradient px-8 py-3 rounded-full font-bold text-on-primary-container hover:backdrop-brightness-110 transition-all">Join Aura</button>
+
           </div>
         </section>
       </main>
