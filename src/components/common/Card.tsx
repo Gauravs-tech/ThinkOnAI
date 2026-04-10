@@ -37,7 +37,7 @@ export default function Card() {
   useEffect(() => {
     const fetchFeed = async () => {
       try {
-        const response = await fetch('https://rss.beehiiv.com/feeds/FrOW8BIJv7.xml');
+        const response = await fetch('https://rss.beehiiv.com/feeds/OAjD5A32cd.xml');
         const text = await response.text();
         const parser = new window.DOMParser();
         const xmlDoc = parser.parseFromString(text, 'text/xml');
